@@ -16,6 +16,25 @@ exports[`App renders correctly 1`] = `
 ♠️ ♥️ BLACKJACK TABLE ♣️ ♦️
 ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️
       </div>
+      <div
+        class="card-container"
+      >
+        <div
+          class="top-left-rank"
+        >
+          A
+        </div>
+        <div
+          class="suit"
+        >
+          ♣️
+        </div>
+        <div
+          class="bottom-right-rank"
+        >
+          A
+        </div>
+      </div>
     </div>
   </div>
 </DocumentFragment>

@@ -1,4 +1,6 @@
 import React from "react";
+import Card from "./Card";
+import data from "../data/data.json";
 import "../styles/app.css";
 
 const App = () => {
@@ -10,6 +12,7 @@ const App = () => {
 ♠️ ♥️ BLACKJACK TABLE ♣️ ♦️
 ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️`}
         </div>
+        <Card card={data.card} />
       </div>
     </div>
   );

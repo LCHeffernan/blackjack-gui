@@ -1,0 +1,33 @@
+.card-container {
+    position: relative;
+    margin: 4px;
+    height: 105px;
+    width: 75px;
+    background-color: white;
+    border: solid black 2px;
+    border-radius: 2px;
+  }
+  
+  .top-left-rank {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    color: black;
+  }
+  
+  .bottom-right-rank {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    color: black;
+  }
+  
+  .suit {
+    position: absolute;
+    font-size: xx-large;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  
