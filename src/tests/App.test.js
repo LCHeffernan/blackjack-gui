@@ -23,6 +23,16 @@ describe("App", () => {
     expect(screen.getByText("Do you want to play?")).toHaveClass("message");
   });
 
+  it("renders 3 buttons with the correct text", () => {
+    render(<App />);
+    const buttons = screen.getAllByRole("button");
+
+    expect(buttons).toHaveLength(3);
+    expect(screen.getByText("New Game")).toHaveClass("new-game-button");
+    expect(screen.getByText("Hit")).toHaveClass("play-button");
+    expect(screen.getByText("Stand")).toHaveClass("play-button");
+  });
+
   it("Stand button is clicked", () => {
     render(<App />);
     const newGameButton = screen.getByText("New Game");
