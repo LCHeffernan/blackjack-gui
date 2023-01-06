@@ -17,6 +17,23 @@ exports[`App renders correctly 1`] = `
 ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️
       </div>
       <div
+        class="cards-container dealer"
+        data-testid="dealer-cards"
+      >
+        <div
+          class="cards"
+        >
+          <div
+            class="score"
+          >
+            Dealer score: 0
+          </div>
+          <div
+            class="player-hand"
+          />
+        </div>
+      </div>
+      <div
         class="cards-container player"
         data-testid="player-cards"
       >

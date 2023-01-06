@@ -4,8 +4,20 @@ exports[`Dealer renders correctly 1`] = `
 <DocumentFragment>
   <div
     class="cards-container dealer"
+    data-testid="dealer-cards"
   >
-    dealer
+    <div
+      class="cards"
+    >
+      <div
+        class="score"
+      >
+        Dealer score: 21
+      </div>
+      <div
+        class="player-hand"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;

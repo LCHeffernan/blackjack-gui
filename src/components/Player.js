@@ -5,12 +5,10 @@ import "../styles/player.css";
 
 const Player = ({ playerHand, playerScore }) => (
   <div className="cards-container player" data-testid="player-cards">
-    {playerHand && (
-      <div className="cards">
-        <div className="score">{`Player score: ${playerScore}`}</div>
-        <Cards cards={playerHand} />
-      </div>
-    )}
+    <div className="cards">
+      <div className="score">{`Player score: ${playerScore}`}</div>
+      <Cards cards={playerHand} />
+    </div>
   </div>
 );
 

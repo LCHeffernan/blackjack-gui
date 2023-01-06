@@ -13,15 +13,22 @@ const App = () => {
     isHandValid: true,
     isGameOver: true,
   });
-  const [handObject, setHandObject] = React.useState({});
+  const [dealerHand, setDealerHand] = useState({
+    isHandValid: true,
+  });
+  const [handObject, setHandObject] = useState({});
 
   const handleNewGame = () => {
     const deck = new Deck();
     deck.initiateDeck();
     const dealer = new Dealer(deck);
     const hand = new Hand(dealer);
+    const handDealer = new Hand(dealer);
+
     hand.hitMe();
+    handDealer.hitMe();
     hand.hitMe();
+    handDealer.hitMe();
 
     setHandObject(hand);
     setPlayerHand({
@@ -29,6 +36,12 @@ const App = () => {
       playerScore: hand.playerScore,
       isHandValid: hand.isHandValid,
       isGameOver: hand.isGameOver,
+    });
+    setDealerHand({
+      dealerHand: handDealer.playerHand,
+      dealerScore: handDealer.playerScore,
+      isHandValid: handDealer.isHandValid,
+      isGameOver: handDealer.isGameOver,
     });
   };
 
@@ -58,7 +71,13 @@ const App = () => {
 ♠️ ♥️ BLACKJACK TABLE ♣️ ♦️
 ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️`}
         </div>
-        {playerHand.playerHand && <DealerPlayer className="dealer" />}
+        {playerHand && (
+          <DealerPlayer
+            className="dealer"
+            dealerHand={dealerHand.dealerHand}
+            dealerScore={dealerHand.dealerScore}
+          />
+        )}
         {playerHand && (
           <Player
             className="player"
