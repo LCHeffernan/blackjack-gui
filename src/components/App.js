@@ -100,7 +100,7 @@ const App = () => {
 ♠️ ♥️ BLACKJACK TABLE ♣️ ♦️
 ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️`}
         </div>
-        {playerHand && (
+        {playerHand.playerHand && (
           <DealerPlayer
             className="dealer"
             dealerHand={dealerHand.dealerHand}
@@ -108,7 +108,7 @@ const App = () => {
             isPlayerGameOver={playerHand.isGameOver}
           />
         )}
-        {playerHand && (
+        {playerHand.playerHand && (
           <Player
             className="player"
             playerHand={playerHand.playerHand}
