@@ -72,6 +72,19 @@ exports[`App renders correctly 1`] = `
           </div>
         </div>
       </div>
+      <div
+        class="buttons"
+      >
+        <div>
+          <button
+            class="new-game-button"
+            data-testid="new-game-button"
+            type="button"
+          >
+            New Game
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </DocumentFragment>

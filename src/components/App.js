@@ -1,5 +1,6 @@
 import React from "react";
 import Player from "./Player";
+import NewGame from "./NewGame";
 import data from "../data/data.json";
 import "../styles/app.css";
 
@@ -19,6 +20,9 @@ const App = () => {
             playerScore={data.playerHand.playerScore}
           />
         )}
+        <div className="buttons">
+          <NewGame />
+        </div>
       </div>
     </div>
   );
