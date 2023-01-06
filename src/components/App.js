@@ -13,7 +13,11 @@ const App = () => {
 ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️`}
         </div>
         {data.playerHand.playerHand && (
-          <Player className="player" playerHand={data.playerHand.playerHand} />
+          <Player
+            className="player"
+            playerHand={data.playerHand.playerHand}
+            playerScore={data.playerHand.playerScore}
+          />
         )}
       </div>
     </div>

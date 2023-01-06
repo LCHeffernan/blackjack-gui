@@ -1,4 +1,4 @@
-import React, { render } from "@testing-library/react";
+import React, { render, screen } from "@testing-library/react";
 import Player from "../components/Player";
 
 describe("Player", () => {
@@ -25,5 +25,15 @@ describe("Player", () => {
       />
     );
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  it("renders the correct score", () => {
+    render(
+      <Player
+        playerHand={validProps.playerHand}
+        playerScore={validProps.playerScore}
+      />
+    );
+    expect(screen.getByText("Player score: 21")).toHaveClass("score");
   });
 });

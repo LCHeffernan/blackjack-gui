@@ -2,10 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import Cards from "./Cards";
 
-const Player = ({ playerHand }) => (
+const Player = ({ playerHand, playerScore }) => (
   <div className="cards-container player" data-testid="player-cards">
     {playerHand && (
       <div className="cards">
+        <div className="score">{`Player score: ${playerScore}`}</div>
         <Cards cards={playerHand} />
       </div>
     )}
@@ -24,6 +25,7 @@ Player.propTypes = {
       cardValue: PropTypes.number,
     })
   ),
+  playerScore: PropTypes.number.isRequired,
 };
 
 export default Player;
