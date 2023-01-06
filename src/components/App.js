@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Player from "./Player";
 import NewGame from "./NewGame";
 import PlayButtons from "./PlayButtons";
@@ -17,6 +17,7 @@ const App = () => {
     isHandValid: true,
   });
   const [handObject, setHandObject] = useState({});
+  const [dealerHandObject, setDealerHandObject] = React.useState({});
 
   const handleNewGame = () => {
     const deck = new Deck();
@@ -31,6 +32,7 @@ const App = () => {
     handDealer.hitMe();
 
     setHandObject(hand);
+    setDealerHandObject(handDealer);
     setPlayerHand({
       playerHand: hand.playerHand,
       playerScore: hand.playerScore,
@@ -62,6 +64,25 @@ const App = () => {
       isGameOver: handObject.isGameOver,
     });
   };
+
+  useEffect(() => {
+    if (playerHand.isGameOver && playerHand.isHandValid) {
+      if (dealerHand.dealerScore < 17) {
+        dealerHandObject.hitMe();
+        setDealerHand({
+          dealerHand: dealerHandObject.playerHand,
+          dealerScore: dealerHandObject.playerScore,
+          isHandValid: dealerHandObject.isHandValid,
+          isGameOver: dealerHandObject.isGameOver,
+        });
+      }
+    }
+  }, [
+    playerHand.isHandValid,
+    playerHand.isGameOver,
+    dealerHand.dealerScore,
+    dealerHandObject,
+  ]);
 
   return (
     <div className="app">
