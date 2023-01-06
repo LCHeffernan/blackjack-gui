@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Card";
+import Cards from "./Cards";
 import data from "../data/data.json";
 import "../styles/app.css";
 
@@ -12,7 +12,7 @@ const App = () => {
 ♠️ ♥️ BLACKJACK TABLE ♣️ ♦️
 ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️`}
         </div>
-        <Card card={data.card} />
+        <Cards cards={data.cards} />
       </div>
     </div>
   );
