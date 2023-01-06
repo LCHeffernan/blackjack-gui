@@ -41,6 +41,14 @@ const App = () => {
     });
   };
 
+  const handleStand = () => {
+    handObject.stand();
+    setPlayerHand({
+      ...playerHand,
+      isGameOver: handObject.isGameOver,
+    });
+  };
+
   return (
     <div className="app">
       <div className="table">
@@ -61,7 +69,7 @@ const App = () => {
             handleNewGame={handleNewGame}
             isGameOver={playerHand.isGameOver}
           />
-          <PlayButtons handleHitMe={handleHitMe} />
+          <PlayButtons handleHitMe={handleHitMe} handleStand={handleStand} />
         </div>
       </div>
     </div>
