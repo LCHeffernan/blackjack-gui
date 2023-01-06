@@ -5,7 +5,7 @@ exports[`Message renders correctly 1`] = `
   <div
     class="message"
   >
-    message
+    Enjoy your game
   </div>
 </DocumentFragment>
 `;
