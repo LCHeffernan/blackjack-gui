@@ -47,12 +47,14 @@ exports[`App renders correctly 1`] = `
         <div>
           <button
             class="play-button"
+            disabled=""
             type="button"
           >
             Hit
           </button>
           <button
             class="play-button"
+            disabled=""
             type="button"
           >
             Stand

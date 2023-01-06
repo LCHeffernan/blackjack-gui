@@ -5,6 +5,7 @@ describe("PlayButtons", () => {
   const validProps = {
     handleHitMe: jest.fn(),
     handleStand: jest.fn(),
+    isGameOver: false,
   };
 
   it("renders correctly", () => {
@@ -12,6 +13,7 @@ describe("PlayButtons", () => {
       <PlayButtons
         handleHitMe={validProps.handleHitMe}
         handleStand={validProps.handleStand}
+        isGameOver={validProps.isGameOver}
       />
     );
 
@@ -23,6 +25,7 @@ describe("PlayButtons", () => {
       <PlayButtons
         handleHitMe={validProps.handleHitMe}
         handleStand={validProps.handleStand}
+        isGameOver={validProps.isGameOver}
       />
     );
     const button = screen.getByText("Hit");
@@ -37,6 +40,7 @@ describe("PlayButtons", () => {
       <PlayButtons
         handleHitMe={validProps.handleHitMe}
         handleStand={validProps.handleStand}
+        isGameOver={validProps.isGameOver}
       />
     );
     const button = screen.getByText("Stand");

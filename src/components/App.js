@@ -69,7 +69,11 @@ const App = () => {
             handleNewGame={handleNewGame}
             isGameOver={playerHand.isGameOver}
           />
-          <PlayButtons handleHitMe={handleHitMe} handleStand={handleStand} />
+          <PlayButtons
+            handleHitMe={handleHitMe}
+            handleStand={handleStand}
+            isGameOver={playerHand.isGameOver}
+          />
         </div>
       </div>
     </div>
