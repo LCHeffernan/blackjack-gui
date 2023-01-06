@@ -88,4 +88,17 @@ describe("Message", () => {
       "message"
     );
   });
+
+  it("renders correct message if player has blackjack", () => {
+    validProps.dealerHand.dealerScore = 20;
+
+    render(
+      <Message
+        playerHand={validProps.playerHand}
+        dealerHand={validProps.dealerHand}
+      />
+    );
+
+    expect(screen.getByText("♥️ ♣️ BLACKJACK ♦️ ♠️")).toHaveClass("message");
+  });
 });

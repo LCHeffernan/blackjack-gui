@@ -13,6 +13,8 @@ const Message = ({ playerHand, dealerHand }) => {
     ) {
       if (dealerHand.dealerScore === 21 && dealerHand.dealerHand.length === 2) {
         setMessage("DRAW - You both have blackjack");
+      } else {
+        setMessage("♥️ ♣️ BLACKJACK ♦️ ♠️");
       }
     } else {
       setMessage("Enjoy your game");
