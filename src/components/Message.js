@@ -24,6 +24,8 @@ const Message = ({ playerHand, dealerHand }) => {
           setMessage("Sorry you LOSE");
         } else if (dealerHand.dealerScore < playerHand.playerScore) {
           setMessage("Congratulations you WIN");
+        } else {
+          setMessage("DRAW");
         }
       }
     } else {

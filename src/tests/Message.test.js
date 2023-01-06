@@ -142,4 +142,17 @@ describe("Message", () => {
 
     expect(screen.getByText("Congratulations you WIN")).toHaveClass("message");
   });
+
+  it("renders correct message if player has same score as dealer (not blackjack) ", () => {
+    validProps.dealerHand.dealerScore = 18;
+
+    render(
+      <Message
+        playerHand={validProps.playerHand}
+        dealerHand={validProps.dealerHand}
+      />
+    );
+
+    expect(screen.getByText("DRAW")).toHaveClass("message");
+  });
 });
