@@ -115,7 +115,7 @@ const App = () => {
             playerScore={playerHand.playerScore}
           />
         )}
-        <Message className="message" />
+        <Message className="message" playerHand={playerHand} />
         <div className="buttons">
           <NewGame
             handleNewGame={handleNewGame}
