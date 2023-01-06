@@ -22,6 +22,8 @@ const Message = ({ playerHand, dealerHand }) => {
       } else if (dealerHand.dealerScore >= 17 && dealerHand.dealerScore <= 21) {
         if (dealerHand.dealerScore > playerHand.playerScore) {
           setMessage("Sorry you LOSE");
+        } else if (dealerHand.dealerScore < playerHand.playerScore) {
+          setMessage("Congratulations you WIN");
         }
       }
     } else {
