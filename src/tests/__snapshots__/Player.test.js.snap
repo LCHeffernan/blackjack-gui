@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Player renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="cards-container player"
+    data-testid="player-cards"
+  >
+    <div
+      class="cards"
+    >
+      <div
+        class="player-hand"
+      >
+        <div
+          class="card-container"
+        >
+          <div
+            class="top-left-rank"
+          >
+            A
+          </div>
+          <div
+            class="suit"
+          >
+            Mock
+          </div>
+          <div
+            class="bottom-right-rank"
+          >
+            A
+          </div>
+        </div>
+        <div
+          class="card-container"
+        >
+          <div
+            class="top-left-rank"
+          >
+            K
+          </div>
+          <div
+            class="suit"
+          >
+            Mock
+          </div>
+          <div
+            class="bottom-right-rank"
+          >
+            K
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

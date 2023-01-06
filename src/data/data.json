@@ -1,12 +1,17 @@
-{  "cards": [
-    {
-      "cardRank": "A",
-      "cardSuit": "Mock",
-      "cardValue": 11
-    },
-    {
-      "cardRank": "K",
-      "cardSuit": "Mock",
-      "cardValue": 10
-    }
-  ]}
+{
+  "playerHand": {
+    "playerHand": [
+      {
+        "cardRank": "A",
+        "cardSuit": "Mock",
+        "cardValue": 11
+      },
+      {
+        "cardRank": "K",
+        "cardSuit": "Mock",
+        "cardValue": 10
+      }
+    ],
+    "playerScore": 21
+  }
+}

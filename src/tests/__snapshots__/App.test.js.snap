@@ -17,44 +17,53 @@ exports[`App renders correctly 1`] = `
 ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️
       </div>
       <div
-        class="player-hand"
+        class="cards-container player"
+        data-testid="player-cards"
       >
         <div
-          class="card-container"
+          class="cards"
         >
           <div
-            class="top-left-rank"
+            class="player-hand"
           >
-            A
-          </div>
-          <div
-            class="suit"
-          >
-            Mock
-          </div>
-          <div
-            class="bottom-right-rank"
-          >
-            A
-          </div>
-        </div>
-        <div
-          class="card-container"
-        >
-          <div
-            class="top-left-rank"
-          >
-            K
-          </div>
-          <div
-            class="suit"
-          >
-            Mock
-          </div>
-          <div
-            class="bottom-right-rank"
-          >
-            K
+            <div
+              class="card-container"
+            >
+              <div
+                class="top-left-rank"
+              >
+                A
+              </div>
+              <div
+                class="suit"
+              >
+                Mock
+              </div>
+              <div
+                class="bottom-right-rank"
+              >
+                A
+              </div>
+            </div>
+            <div
+              class="card-container"
+            >
+              <div
+                class="top-left-rank"
+              >
+                K
+              </div>
+              <div
+                class="suit"
+              >
+                Mock
+              </div>
+              <div
+                class="bottom-right-rank"
+              >
+                K
+              </div>
+            </div>
           </div>
         </div>
       </div>

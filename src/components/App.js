@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "./Cards";
+import Player from "./Player";
 import data from "../data/data.json";
 import "../styles/app.css";
 
@@ -12,7 +12,9 @@ const App = () => {
 ♠️ ♥️ BLACKJACK TABLE ♣️ ♦️
 ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️`}
         </div>
-        <Cards cards={data.cards} />
+        {data.playerHand.playerHand && (
+          <Player className="player" playerHand={data.playerHand.playerHand} />
+        )}
       </div>
     </div>
   );
