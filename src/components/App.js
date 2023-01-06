@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import Player from "./Player";
 import NewGame from "./NewGame";
-import data from "../data/data.json";
+import Deck from "../objects/Deck";
+import Dealer from "../objects/Dealer";
+import Hand from "../objects/Hand";
 import "../styles/app.css";
 
 const App = () => {
-  const [playerHand, setPlayerHand] = React.useState({
+  const [playerHand, setPlayerHand] = useState({
     isHandValid: true,
     isGameOver: true,
   });
 
   const handleNewGame = () => {
+    const deck = new Deck();
+    deck.initiateDeck();
+    const dealer = new Dealer(deck);
+    const hand = new Hand(dealer);
+    hand.hitMe();
+    hand.hitMe();
+
     setPlayerHand({
-      playerHand: data.playerHand.playerHand,
-      playerScore: data.playerHand.playerScore,
-      isHandValid: data.playerHand.isHandValid,
-      isGameOver: data.playerHand.isGameOver,
+      playerHand: hand.playerHand,
+      playerScore: hand.playerScore,
+      isHandValid: hand.isHandValid,
+      isGameOver: hand.isGameOver,
     });
   };
 

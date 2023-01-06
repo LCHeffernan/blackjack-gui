@@ -39,7 +39,6 @@ exports[`App renders correctly 1`] = `
         <div>
           <button
             class="new-game-button"
-            data-testid="new-game-button"
             type="button"
           >
             New Game

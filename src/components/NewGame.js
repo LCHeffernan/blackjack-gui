@@ -5,7 +5,6 @@ const NewGame = ({ handleNewGame, isGameOver }) => (
   <div>
     <button
       className="new-game-button"
-      data-testid="new-game-button"
       type="button"
       onClick={handleNewGame}
       disabled={!isGameOver}
