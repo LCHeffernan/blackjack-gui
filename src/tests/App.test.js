@@ -2,8 +2,20 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import App from "../components/App";
 
-test("renders learn react link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/blackjack/i);
-  expect(linkElement).toBeInTheDocument();
+describe("App", () => {
+  it("renders correctly", () => {
+    const { asFragment } = render(<App />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it("renders correct title and message", () => {
+    render(<App />);
+
+    expect(
+      screen.getByText(
+        "♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♠️ ♥️ BLACKJACK TABLE ♣️ ♦️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️"
+      )
+    ).toBeInTheDocument();
+  });
 });
