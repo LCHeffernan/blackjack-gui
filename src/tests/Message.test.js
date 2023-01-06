@@ -116,4 +116,17 @@ describe("Message", () => {
 
     expect(screen.getByText("Dealer bust, you WIN")).toHaveClass("message");
   });
+
+  it("renders correct message if dealer has higher score than player ", () => {
+    validProps.dealerHand.dealerScore = 20;
+
+    render(
+      <Message
+        playerHand={validProps.playerHand}
+        dealerHand={validProps.dealerHand}
+      />
+    );
+
+    expect(screen.getByText("Sorry you LOSE")).toHaveClass("message");
+  });
 });
