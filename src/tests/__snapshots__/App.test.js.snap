@@ -51,6 +51,11 @@ exports[`App renders correctly 1`] = `
         </div>
       </div>
       <div
+        class="message"
+      >
+        message
+      </div>
+      <div
         class="buttons"
       >
         <div>

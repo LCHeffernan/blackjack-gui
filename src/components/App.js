@@ -3,6 +3,7 @@ import Player from "./Player";
 import NewGame from "./NewGame";
 import PlayButtons from "./PlayButtons";
 import DealerPlayer from "./DealerPlayer";
+import Message from "./Message";
 import Deck from "../objects/Deck";
 import Dealer from "../objects/Dealer";
 import Hand from "../objects/Hand";
@@ -114,6 +115,7 @@ const App = () => {
             playerScore={playerHand.playerScore}
           />
         )}
+        <Message className="message" />
         <div className="buttons">
           <NewGame
             handleNewGame={handleNewGame}
