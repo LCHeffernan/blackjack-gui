@@ -5,7 +5,9 @@ const Message = ({ playerHand }) => {
   const [message, setMessage] = useState();
 
   useEffect(() => {
-    if (playerHand.isHandValid) {
+    if (!playerHand.isHandValid) {
+      setMessage("BUST - GAME OVER!");
+    } else {
       setMessage("Enjoy your game");
     }
   }, [playerHand]);

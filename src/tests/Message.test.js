@@ -34,4 +34,11 @@ describe("Message", () => {
 
     expect(screen.getByText("Enjoy your game")).toHaveClass("message");
   });
+
+  it("renders correct message upon player having bust hand", () => {
+    validProps.playerHand.isHandValid = false;
+    render(<Message playerHand={validProps.playerHand} />);
+
+    expect(screen.getByText("BUST - GAME OVER!")).toHaveClass("message");
+  });
 });
