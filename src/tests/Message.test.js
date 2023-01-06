@@ -101,4 +101,19 @@ describe("Message", () => {
 
     expect(screen.getByText("♥️ ♣️ BLACKJACK ♦️ ♠️")).toHaveClass("message");
   });
+
+  it("renders correct message if dealer is bust", () => {
+    validProps.playerHand.isGameOver = true;
+    validProps.playerHand.playerScore = 18;
+    validProps.dealerHand.dealerScore = 22;
+
+    render(
+      <Message
+        playerHand={validProps.playerHand}
+        dealerHand={validProps.dealerHand}
+      />
+    );
+
+    expect(screen.getByText("Dealer bust, you WIN")).toHaveClass("message");
+  });
 });

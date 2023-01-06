@@ -16,6 +16,10 @@ const Message = ({ playerHand, dealerHand }) => {
       } else {
         setMessage("♥️ ♣️ BLACKJACK ♦️ ♠️");
       }
+    } else if (playerHand.isGameOver && playerHand.isHandValid) {
+      if (dealerHand.dealerScore > 21) {
+        setMessage("Dealer bust, you WIN");
+      }
     } else {
       setMessage("Enjoy your game");
     }
