@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Card from "./Card";
+import "../styles/cards.css";
 
 const Cards = ({ cards }) => {
   return (
