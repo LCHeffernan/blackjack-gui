@@ -1,21 +1,82 @@
 * {
-    box-sizing: border-box;
-    font-size: 12px;
-  }
+  box-sizing: border-box;
+  font-size: 12px;
+}
 
-  .app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-  }
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+}
 
+.table {
+  display: grid;
+  grid-template-rows: 15% auto 8% auto 10%;
+  grid-template-areas:
+    "title"
+    "dealer"
+    "message"
+    "player"
+    "buttons";
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: #00512c;
+  text-align: center;
+}
+
+.title {
+  grid-area: title;
+  font-size: 4vw;
+}
+
+.dealer {
+  grid-area: dealer;
+}
+
+.message {
+  grid-area: message;
+  border: dashed white 2px;
+  width: fit-content;
+  margin: 3px auto;
+  padding: 10px;
+  color: white;
+}
+
+.player {
+  grid-area: player;
+}
+
+.buttons {
+  grid-area: buttons;
+  left: 50%;
+  top: 50%;
+}
+
+.new-game-button,
+.play-button {
+  margin: 3px;
+}
+
+.new-game-button,
+.play-button {
+  padding: 4px;
+  font-family: "Press Start 2P", cursive;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .table {
-    padding: 0px;
-    margin: 0px;
-    height: 100%;
-    width: 100%;
-    background-color: #00512c;
-    text-align: center;
+    height: 90%;
+    width: 90%;
   }
+}
