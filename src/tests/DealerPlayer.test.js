@@ -16,6 +16,7 @@ describe("Dealer", () => {
       },
     ],
     dealerScore: 21,
+    isPlayerGameOver: true,
   };
 
   it("renders correctly", () => {
@@ -23,6 +24,7 @@ describe("Dealer", () => {
       <DealerPlayer
         dealerHand={validProps.dealerHand}
         dealerScore={validProps.dealerScore}
+        isPlayerGameOver={validProps.isPlayerGameOver}
       />
     );
     expect(asFragment()).toMatchSnapshot();
@@ -33,6 +35,7 @@ describe("Dealer", () => {
       <DealerPlayer
         dealerHand={validProps.dealerHand}
         dealerScore={validProps.dealerScore}
+        isPlayerGameOver={validProps.isPlayerGameOver}
       />
     );
     expect(screen.getByText("Dealer score: 21")).toHaveClass("score");

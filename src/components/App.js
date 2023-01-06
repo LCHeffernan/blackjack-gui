@@ -97,6 +97,7 @@ const App = () => {
             className="dealer"
             dealerHand={dealerHand.dealerHand}
             dealerScore={dealerHand.dealerScore}
+            isPlayerGameOver={playerHand.isGameOver}
           />
         )}
         {playerHand && (

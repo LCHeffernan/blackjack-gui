@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import App from "../components/App";
 
 describe("App", () => {
@@ -17,5 +17,15 @@ describe("App", () => {
         "♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♠️ ♥️ BLACKJACK TABLE ♣️ ♦️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️"
       )
     ).toBeInTheDocument();
+  });
+
+  it("Stand button is clicked", () => {
+    render(<App />);
+    const newGameButton = screen.getByText("New Game");
+    const standButton = screen.getByText("Stand");
+
+    fireEvent.click(newGameButton);
+    fireEvent.click(standButton);
+    expect(screen.getByText(/Dealer score:/i)).toBeInTheDocument();
   });
 });

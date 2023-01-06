@@ -2,11 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import Cards from "./Cards";
 
-const DealerPlayer = ({ dealerHand, dealerScore }) => (
+const DealerPlayer = ({ dealerHand, dealerScore, isPlayerGameOver }) => (
   <div className="cards-container dealer" data-testid="dealer-cards">
     {dealerHand && (
       <div className="cards">
-        <div className="score">{`Dealer score: ${dealerScore}`}</div>
+        {isPlayerGameOver && (
+          <div className="score">{`Dealer score: ${dealerScore}`}</div>
+        )}
         <Cards cards={dealerHand} />
       </div>
     )}
@@ -27,6 +29,7 @@ DealerPlayer.propTypes = {
     })
   ),
   dealerScore: PropTypes.number,
+  isPlayerGameOver: PropTypes.bool.isRequired,
 };
 
 export default DealerPlayer;
