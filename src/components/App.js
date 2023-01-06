@@ -40,7 +40,7 @@ const App = () => {
       isGameOver: hand.isGameOver,
     });
     setDealerHand({
-      dealerHand: handDealer.playerHand,
+      dealerHand: [handDealer.playerHand[0], {}],
       dealerScore: handDealer.playerScore,
       isHandValid: handDealer.isHandValid,
       isGameOver: handDealer.isGameOver,
@@ -66,6 +66,12 @@ const App = () => {
   };
 
   useEffect(() => {
+    if (playerHand.isGameOver) {
+      setDealerHand({
+        ...dealerHand,
+        dealerHand: dealerHandObject.playerHand,
+      });
+    }
     if (playerHand.isGameOver && playerHand.isHandValid) {
       if (dealerHand.dealerScore < 17) {
         dealerHandObject.hitMe();
@@ -77,6 +83,7 @@ const App = () => {
         });
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     playerHand.isHandValid,
     playerHand.isGameOver,

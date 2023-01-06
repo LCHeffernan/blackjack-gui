@@ -6,7 +6,8 @@ exports[`Cards renders correctly 1`] = `
     class="player-hand"
   >
     <div
-      class="card-container"
+      class="card-container show"
+      data-testid="card"
     >
       <div
         class="top-left-rank"
@@ -25,7 +26,8 @@ exports[`Cards renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="card-container"
+      class="card-container show"
+      data-testid="card"
     >
       <div
         class="top-left-rank"

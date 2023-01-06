@@ -20,4 +20,9 @@ describe("Card", () => {
     expect(screen.getByText("♣️")).toHaveClass("suit");
     expect(screen.getAllByText("A")).toHaveLength(2);
   });
+
+  it("hides empty card object", () => {
+    render(<Card card={{}} />);
+    expect(screen.getByTestId("card")).toHaveClass("card-container hide");
+  });
 });

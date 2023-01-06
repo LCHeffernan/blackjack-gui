@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 import "../styles/card.css";
 
 const Card = ({ card }) => (
-  <div className="card-container">
+  <div
+    className={`card-container ${card.cardSuit ? "show" : "hide"}`}
+    data-testid="card"
+  >
     <div className="top-left-rank">{card.cardRank}</div>
     <div className="suit">{card.cardSuit}</div>
     <div className="bottom-right-rank">{card.cardRank}</div>
