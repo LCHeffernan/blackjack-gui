@@ -16,4 +16,17 @@ describe("NewGame", () => {
     );
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it("click handler is called", () => {
+    render(
+      <NewGame
+        handleNewGame={validProps.handleNewGame}
+        isGameOver={validProps.isGameOver}
+      />
+    );
+    const button = screen.getByRole("button");
+    expect(button).not.toBeDisabled();
+    fireEvent.click(button);
+    expect(validProps.handleNewGame).toHaveBeenCalled();
+  });
 });

@@ -16,6 +16,7 @@ const Player = ({ playerHand, playerScore }) => (
 
 Player.defaultProps = {
   playerHand: [],
+  playerScore: 0,
 };
 
 Player.propTypes = {
@@ -26,7 +27,7 @@ Player.propTypes = {
       cardValue: PropTypes.number,
     })
   ),
-  playerScore: PropTypes.number.isRequired,
+  playerScore: PropTypes.number,
 };
 
 export default Player;

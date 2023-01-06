@@ -12,6 +12,8 @@
         "cardValue": 10
       }
     ],
-    "playerScore": 21
+    "playerScore": 21,
+    "isHandValid": true,
+    "isGameOver": true
   }
 }

@@ -26,50 +26,11 @@ exports[`App renders correctly 1`] = `
           <div
             class="score"
           >
-            Player score: 21
+            Player score: 0
           </div>
           <div
             class="player-hand"
-          >
-            <div
-              class="card-container"
-            >
-              <div
-                class="top-left-rank"
-              >
-                A
-              </div>
-              <div
-                class="suit"
-              >
-                Mock
-              </div>
-              <div
-                class="bottom-right-rank"
-              >
-                A
-              </div>
-            </div>
-            <div
-              class="card-container"
-            >
-              <div
-                class="top-left-rank"
-              >
-                K
-              </div>
-              <div
-                class="suit"
-              >
-                Mock
-              </div>
-              <div
-                class="bottom-right-rank"
-              >
-                K
-              </div>
-            </div>
-          </div>
+          />
         </div>
       </div>
       <div
