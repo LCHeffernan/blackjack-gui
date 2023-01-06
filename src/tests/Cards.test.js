@@ -1,4 +1,4 @@
-import React, { render } from "@testing-library/react";
+import React, { render, screen } from "@testing-library/react";
 import Cards from "../components/Cards";
 
 describe("Cards", () => {
@@ -16,8 +16,14 @@ describe("Cards", () => {
       },
     ],
   };
+
   it("renders correctly", () => {
     const { asFragment } = render(<Cards cards={validProps.cards} />);
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  it("renders the correct number of cards", () => {
+    render(<Cards cards={validProps.cards} />);
+    expect(screen.getAllByText("Mock")).toHaveLength(2);
   });
 });
