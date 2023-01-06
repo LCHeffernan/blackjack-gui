@@ -3,6 +3,8 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import App from "../components/App";
 
 describe("App", () => {
+  const regexExp =
+    /(\u00a9|\u00ae|[\u2000-\u3300]|\ud83c[\ud000-\udfff]|\ud83d[\ud000-\udfff]|\ud83e[\ud000-\udfff])/i;
   it("renders correctly", () => {
     const { asFragment } = render(<App />);
 
@@ -17,6 +19,7 @@ describe("App", () => {
         "♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♠️ ♥️ BLACKJACK TABLE ♣️ ♦️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️"
       )
     ).toBeInTheDocument();
+    expect(screen.getAllByText(regexExp).length).toEqual(1);
   });
 
   it("Stand button is clicked", () => {
