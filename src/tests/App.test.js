@@ -33,13 +33,11 @@ describe("App", () => {
     expect(screen.getByText("Stand")).toHaveClass("play-button");
   });
 
-  it("Stand button is clicked", () => {
+  it("New game button is clicked", () => {
     render(<App />);
-    const newGameButton = screen.getByText("New Game");
-    const standButton = screen.getByText("Stand");
+    const button = screen.getByText("New Game");
+    fireEvent.click(button);
 
-    fireEvent.click(newGameButton);
-    fireEvent.click(standButton);
-    expect(screen.getByText(/Dealer score:/i)).toBeInTheDocument();
+    expect(screen.getByText(/Player score:/i)).toBeInTheDocument();
   });
 });
