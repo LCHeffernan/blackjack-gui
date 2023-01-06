@@ -5,7 +5,21 @@ exports[`Card renders correctly 1`] = `
   <div
     class="card-container"
   >
-    card
+    <div
+      class="top-left-rank"
+    >
+      A
+    </div>
+    <div
+      class="suit"
+    >
+      ♣️
+    </div>
+    <div
+      class="bottom-right-rank"
+    >
+      A
+    </div>
   </div>
 </DocumentFragment>
 `;
