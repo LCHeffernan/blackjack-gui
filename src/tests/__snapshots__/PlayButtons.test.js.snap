@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayButtons renders correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <button
+      class="play-button"
+      type="button"
+    >
+      Hit
+    </button>
+    <button
+      class="play-button"
+      type="button"
+    >
+      Stand
+    </button>
+  </div>
+</DocumentFragment>
+`;

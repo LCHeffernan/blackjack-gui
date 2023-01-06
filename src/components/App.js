@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Player from "./Player";
 import NewGame from "./NewGame";
+import PlayButtons from "./PlayButtons";
 import Deck from "../objects/Deck";
 import Dealer from "../objects/Dealer";
 import Hand from "../objects/Hand";
@@ -48,6 +49,7 @@ const App = () => {
             handleNewGame={handleNewGame}
             isGameOver={playerHand.isGameOver}
           />
+          <PlayButtons />
         </div>
       </div>
     </div>

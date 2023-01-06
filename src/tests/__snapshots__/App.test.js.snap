@@ -44,6 +44,20 @@ exports[`App renders correctly 1`] = `
             New Game
           </button>
         </div>
+        <div>
+          <button
+            class="play-button"
+            type="button"
+          >
+            Hit
+          </button>
+          <button
+            class="play-button"
+            type="button"
+          >
+            Stand
+          </button>
+        </div>
       </div>
     </div>
   </div>
