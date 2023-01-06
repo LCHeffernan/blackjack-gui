@@ -12,6 +12,7 @@ const App = () => {
     isHandValid: true,
     isGameOver: true,
   });
+  const [handObject, setHandObject] = React.useState({});
 
   const handleNewGame = () => {
     const deck = new Deck();
@@ -21,11 +22,22 @@ const App = () => {
     hand.hitMe();
     hand.hitMe();
 
+    setHandObject(hand);
     setPlayerHand({
       playerHand: hand.playerHand,
       playerScore: hand.playerScore,
       isHandValid: hand.isHandValid,
       isGameOver: hand.isGameOver,
+    });
+  };
+
+  const handleHitMe = () => {
+    handObject.hitMe();
+    setPlayerHand({
+      playerHand: handObject.playerHand,
+      playerScore: handObject.playerScore,
+      isHandValid: handObject.isHandValid,
+      isGameOver: handObject.isGameOver,
     });
   };
 
@@ -49,7 +61,7 @@ const App = () => {
             handleNewGame={handleNewGame}
             isGameOver={playerHand.isGameOver}
           />
-          <PlayButtons />
+          <PlayButtons handleHitMe={handleHitMe} />
         </div>
       </div>
     </div>
