@@ -12,7 +12,7 @@ const App = () => {
 ♠️ ♥️ BLACKJACK TABLE ♣️ ♦️
 ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️`}
         </div>
-        {data.playerHand.playerHand && (
+        {data.playerHand && (
           <Player
             className="player"
             playerHand={data.playerHand.playerHand}
