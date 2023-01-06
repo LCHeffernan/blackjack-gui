@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Player from "./Player";
 import NewGame from "./NewGame";
 import PlayButtons from "./PlayButtons";
+import DealerPlayer from "./DealerPlayer";
 import Deck from "../objects/Deck";
 import Dealer from "../objects/Dealer";
 import Hand from "../objects/Hand";
@@ -57,6 +58,7 @@ const App = () => {
 ♠️ ♥️ BLACKJACK TABLE ♣️ ♦️
 ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️`}
         </div>
+        {playerHand.playerHand && <DealerPlayer className="dealer" />}
         {playerHand && (
           <Player
             className="player"
