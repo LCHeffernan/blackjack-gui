@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 const Message = ({ playerHand, dealerHand }) => {
-  const [message, setMessage] = useState();
+  const [message, setMessage] = useState("Do you want to play?");
 
   useEffect(() => {
     if (!playerHand.isHandValid) {
