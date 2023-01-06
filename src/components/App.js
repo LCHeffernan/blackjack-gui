@@ -6,6 +6,7 @@ import "../styles/app.css";
 const App = () => {
   return (
     <div className="App">
+      Blackjack
       <Card card={data.card} />
     </div>
   );
