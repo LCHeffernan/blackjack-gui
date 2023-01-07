@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Blackjack App
+___
+## Description.
+This is the GUI for the Javascript blackjack app I created (the original can be found [here](https://github.com/LCHeffernan/blackjack-oop)). It was bootstrapped with [create React App](https://github.com/facebook/create-react-app) and tested using React Testing Library (RTL), the tests can be found in the tests folder.
+<img src="/images/Screenshot-opening-hands.png" width="193" height="417" alt="Screenshot of opening hand" title="Opening hand"/><img src="/images/Screenshot-player-loses.png" width="193" height="417" alt="Screenshot of player losing" title="Losing hand"/><img src="/images/Screenshot-player-bust.png" width="193" height="417" alt="Screenshot of player bust" title="Bust hand"/><img src="/images/Screenshot-blackjack.png" width="193" height="417" alt="Screenshot of player with blackjack" title="Blackjack hand"/>
+___
+## Download and setup.
+This project has React as a dependency and an additional dev dependency RTL. To download the project:
+* Fork the repository.
+* Clone down your fork using ```git clone```.
+* Change directory into your cloned folder and run ``` npm install ```.
+* To run all tests run the command ```npm test```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+___
+## Using the blackjack app.
+|  | Blackjack rules |
+| ------ | ------ |
+|Aim|To beat the dealer's score and not exceed 21. Ideally to score 21 with 2 cards which is called 'blackjack'.|
+|Scoring|The cards 2-10 are worth their face value, the picture cards (Jack, Queen and King) are worth 10 each and the ace is worth either 11 or 1. The ace is worth 11 initially but if this would put the player's score over 21 then it gets re-evaulated to a 1.|
+|Setup|The player and dealer are dealt an opening hand of 2 cards each. One of the dealer's card's and score is hidden from the player until the player has finished their game play|
+|Player's game|The player has two options. Then can choose to 'hit' and receive another card or to 'stand' and have their final score evaluated.|
+|Dealer's game|Once the player has finished their game play the dealer always follows the following algorithm. If the dealer's score is lower than 17 the dealer must hit (unless the player went bust) until their score is 17 or more or they have gone 'bust' (score over 21).|
+|The winner| The highest score wins. If either the player or the dealer is bust then the other wins. If they have the same score under 21 they draw. If they both score 21 then a score of 21 with 2 cards wins over a score of 21 with more than two cards.|
 
-## Available Scripts
+To start a new game first run the app with ```npm start``` then click the new game button. You can then decide to receive another card by clicking 'hit' or to finish the game by clicking 'stand'. When stand is clicked (or you go 'bust') all the dealer's cards and their score is shown. Then the alogithm is followed until the dealer's game play has finished and the appropriate message is displayed, showing who has won the game.
 
-In the project directory, you can run:
+___
+## Future plans.
+I would like the player to be able to 'split' their cards if they are dealt two cards of the same rank in their opening hand. This then gives the player two hands, which they can then hit or stand in the usual manner. I would also like to make the game multi player and even mimic the betting that happens in casinos.
+___
+## Author.
+Lisa Heffernan
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Twitter [@Iisaheffernan](https://twitter.com/Iisaheffernan)
+* GitHub [@LCHeffernan](https://github.com/LCHeffernan)
+* LinkedIn [Lisa Heffernan](https://www.linkedin.com/in/lisa-heffernan-54b61312a)

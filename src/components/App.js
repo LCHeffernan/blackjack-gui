@@ -73,7 +73,7 @@ const App = () => {
         dealerHand: dealerHandObject.playerHand,
       });
     }
-    if (playerHand.isGameOver && playerHand.isHandValid) {
+    if (playerHand.isGameOver && playerHand.playerScore < 21) {
       if (dealerHand.dealerScore < 17) {
         dealerHandObject.hitMe();
         setDealerHand({
