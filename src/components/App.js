@@ -18,7 +18,7 @@ const App = () => {
     isHandValid: true,
   });
   const [handObject, setHandObject] = useState({});
-  const [dealerHandObject, setDealerHandObject] = React.useState({});
+  const [dealerHandObject, setDealerHandObject] = useState({});
 
   const handleNewGame = () => {
     const deck = new Deck();
@@ -73,16 +73,18 @@ const App = () => {
         dealerHand: dealerHandObject.playerHand,
       });
     }
-    if (playerHand.isGameOver && playerHand.isHandValid) {
-      if (dealerHand.dealerScore < 17) {
-        dealerHandObject.hitMe();
-        setDealerHand({
-          dealerHand: dealerHandObject.playerHand,
-          dealerScore: dealerHandObject.playerScore,
-          isHandValid: dealerHandObject.isHandValid,
-          isGameOver: dealerHandObject.isGameOver,
-        });
-      }
+    if (
+      playerHand.isGameOver &&
+      playerHand.playerScore < 21 &&
+      dealerHand.dealerScore < 17
+    ) {
+      dealerHandObject.hitMe();
+      setDealerHand({
+        dealerHand: dealerHandObject.playerHand,
+        dealerScore: dealerHandObject.playerScore,
+        isHandValid: dealerHandObject.isHandValid,
+        isGameOver: dealerHandObject.isGameOver,
+      });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
@@ -100,7 +102,7 @@ const App = () => {
 ♠️ ♥️ BLACKJACK TABLE ♣️ ♦️
 ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️ ♥️ ♣️ ♦️ ♠️`}
         </div>
-        {playerHand && (
+        {playerHand.playerHand && (
           <DealerPlayer
             className="dealer"
             dealerHand={dealerHand.dealerHand}
@@ -108,7 +110,7 @@ const App = () => {
             isPlayerGameOver={playerHand.isGameOver}
           />
         )}
-        {playerHand && (
+        {playerHand.playerHand && (
           <Player
             className="player"
             playerHand={playerHand.playerHand}
