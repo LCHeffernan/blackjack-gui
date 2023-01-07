@@ -73,16 +73,18 @@ const App = () => {
         dealerHand: dealerHandObject.playerHand,
       });
     }
-    if (playerHand.isGameOver && playerHand.playerScore < 21) {
-      if (dealerHand.dealerScore < 17) {
-        dealerHandObject.hitMe();
-        setDealerHand({
-          dealerHand: dealerHandObject.playerHand,
-          dealerScore: dealerHandObject.playerScore,
-          isHandValid: dealerHandObject.isHandValid,
-          isGameOver: dealerHandObject.isGameOver,
-        });
-      }
+    if (
+      playerHand.isGameOver &&
+      playerHand.playerScore < 21 &&
+      dealerHand.dealerScore < 17
+    ) {
+      dealerHandObject.hitMe();
+      setDealerHand({
+        dealerHand: dealerHandObject.playerHand,
+        dealerScore: dealerHandObject.playerScore,
+        isHandValid: dealerHandObject.isHandValid,
+        isGameOver: dealerHandObject.isGameOver,
+      });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
