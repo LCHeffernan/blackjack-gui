@@ -15,7 +15,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --testPathIgnorePatterns=src/tests/objects-tests",
+    "unit": "jest unit",
+    "int": "jest int",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -18,7 +18,7 @@ const App = () => {
     isHandValid: true,
   });
   const [handObject, setHandObject] = useState({});
-  const [dealerHandObject, setDealerHandObject] = React.useState({});
+  const [dealerHandObject, setDealerHandObject] = useState({});
 
   const handleNewGame = () => {
     const deck = new Deck();
