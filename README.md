@@ -5,6 +5,7 @@
 ## Description.
 
 This is the GUI for the Javascript blackjack app I created (the original can be found [here](https://github.com/LCHeffernan/blackjack-oop)). It was bootstrapped with [create React App](https://github.com/facebook/create-react-app) and tested using React Testing Library (RTL), the tests can be found in the tests folder.
+
 <img src="/images/Screenshot-opening-hands.png" width="193" height="417" alt="Screenshot of opening hand" title="Opening hand"/><img src="/images/Screenshot-player-loses.png" width="193" height="417" alt="Screenshot of player losing" title="Losing hand"/><img src="/images/Screenshot-player-bust.png" width="193" height="417" alt="Screenshot of player bust" title="Bust hand"/><img src="/images/Screenshot-blackjack.png" width="193" height="417" alt="Screenshot of player with blackjack" title="Blackjack hand"/>
 
 ---
@@ -16,7 +17,9 @@ This project has React as a dependency and an additional dev dependency RTL. To 
 - Fork the repository.
 - Clone down your fork using `git clone`.
 - Change directory into your cloned folder and run `npm install`.
-- To run all tests run the command `npm test`
+- To run all React component tests run the command `npm test`.
+- To run the unit tests for the objects run `npm run unit`.
+- To run the integration test for the objects run `npm run int`.
 
 ---
 
