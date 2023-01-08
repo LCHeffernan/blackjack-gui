@@ -33,7 +33,7 @@ const Message = ({ playerHand, dealerHand }) => {
     }
   }, [playerHand, dealerHand]);
 
-  return <div className="message">{message}</div>;
+  return <div className="message-text">{message}</div>;
 };
 
 Message.defaultProps = {

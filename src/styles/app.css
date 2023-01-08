@@ -39,11 +39,14 @@
 }
 
 .message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-area: message;
   border: dashed white 2px;
   width: fit-content;
   margin: 3px auto;
-  padding: 10px;
+  padding: 0px 6px;
   color: white;
 }
 
@@ -60,10 +63,6 @@
 .new-game-button,
 .play-button {
   margin: 3px;
-}
-
-.new-game-button,
-.play-button {
   padding: 4px;
   font-family: "Press Start 2P", cursive;
 }
