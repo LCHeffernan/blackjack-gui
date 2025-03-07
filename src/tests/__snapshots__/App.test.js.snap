@@ -19,7 +19,11 @@ exports[`App renders correctly 1`] = `
       <div
         class="message"
       >
-        Do you want to play?
+        <div
+          class="message-text"
+        >
+          Do you want to play?
+        </div>
       </div>
       <div
         class="buttons"

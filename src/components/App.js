@@ -73,9 +73,12 @@ const App = () => {
         dealerHand: dealerHandObject.playerHand,
       });
     }
+    const doesPlayerHaveBlackjack =
+      playerHand.playerScore === 21 && playerHand.playerHand.length === 2;
     if (
       playerHand.isGameOver &&
-      playerHand.playerScore < 21 &&
+      !doesPlayerHaveBlackjack &&
+      playerHand.playerScore <= 21 &&
       dealerHand.dealerScore < 17
     ) {
       dealerHandObject.hitMe();

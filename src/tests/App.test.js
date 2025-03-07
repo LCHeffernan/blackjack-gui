@@ -20,7 +20,7 @@ describe("App", () => {
       )
     ).toBeInTheDocument();
     expect(screen.getAllByText(regexExp).length).toEqual(1);
-    expect(screen.getByText("Do you want to play?")).toHaveClass("message");
+    expect(screen.getByText("Do you want to play?")).toHaveClass("message-text");
   });
 
   it("renders 3 buttons with the correct text", () => {

@@ -3,7 +3,7 @@
 exports[`Message renders correctly 1`] = `
 <DocumentFragment>
   <div
-    class="message"
+    class="message-text"
   >
     Enjoy your game
   </div>
