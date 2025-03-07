@@ -57,7 +57,7 @@ describe("Message", () => {
       />
     );
 
-    expect(screen.getByText("Enjoy your game")).toHaveClass("message");
+    expect(screen.getByText("Enjoy your game")).toHaveClass("message-text");
   });
 
   it("renders correct message upon player having bust hand", () => {
@@ -69,7 +69,7 @@ describe("Message", () => {
       />
     );
 
-    expect(screen.getByText("BUST - GAME OVER!")).toHaveClass("message");
+    expect(screen.getByText("BUST - GAME OVER!")).toHaveClass("message-text");
   });
 
   it("renders correct message if player and dealer have blackjack", () => {
@@ -85,7 +85,7 @@ describe("Message", () => {
     );
 
     expect(screen.getByText("DRAW - You both have blackjack")).toHaveClass(
-      "message"
+      "message-text"
     );
   });
 
@@ -99,7 +99,7 @@ describe("Message", () => {
       />
     );
 
-    expect(screen.getByText("♥️ ♣️ BLACKJACK ♦️ ♠️")).toHaveClass("message");
+    expect(screen.getByText("♥️ ♣️ BLACKJACK ♦️ ♠️")).toHaveClass("message-text");
   });
 
   it("renders correct message if dealer is bust", () => {
@@ -114,7 +114,7 @@ describe("Message", () => {
       />
     );
 
-    expect(screen.getByText("Dealer bust, you WIN")).toHaveClass("message");
+    expect(screen.getByText("Dealer bust, you WIN")).toHaveClass("message-text");
   });
 
   it("renders correct message if dealer has higher score than player ", () => {
@@ -127,7 +127,7 @@ describe("Message", () => {
       />
     );
 
-    expect(screen.getByText("Sorry you LOSE")).toHaveClass("message");
+    expect(screen.getByText("Sorry you LOSE")).toHaveClass("message-text");
   });
 
   it("renders correct message if player has higher score than dealer ", () => {
@@ -140,7 +140,7 @@ describe("Message", () => {
       />
     );
 
-    expect(screen.getByText("Congratulations you WIN")).toHaveClass("message");
+    expect(screen.getByText("Congratulations you WIN")).toHaveClass("message-text");
   });
 
   it("renders correct message if player has same score as dealer (not blackjack) ", () => {
@@ -153,6 +153,6 @@ describe("Message", () => {
       />
     );
 
-    expect(screen.getByText("DRAW")).toHaveClass("message");
+    expect(screen.getByText("DRAW")).toHaveClass("message-text");
   });
 });
