@@ -19,7 +19,7 @@
     "title"
     "dealer"
     "message"
-    "player"
+    "playerWrapper"
     "buttons";
   padding: 0px;
   margin: 0px;
@@ -50,8 +50,11 @@
   color: white;
 }
 
-.player {
-  grid-area: player;
+.playerWrapper {
+  grid-area: playerWrapper;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .buttons {
